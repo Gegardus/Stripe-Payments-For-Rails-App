@@ -1,0 +1,25 @@
+Started GET "/" for ::1 at 2023-05-10 10:05:08 +0400
+Processing by ApplicationController#stripe_payment as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/stripe_payment.html.erb within layouts/application
+  Rendered application/stripe_payment.html.erb within layouts/application (Duration: 45.2ms | Allocations: 4701)
+  Rendered layout layouts/application.html.erb (Duration: 942.2ms | Allocations: 101230)
+Completed 200 OK in 1095ms (Views: 968.1ms | ActiveRecord: 0.0ms | Allocations: 105770)
+
+
+Started POST "/charges" for ::1 at 2023-05-10 10:07:29 +0400
+Processing by ChargesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "amount"=>"10", "card_number"=>"4242 4242 4242 4242", "month"=>"01", "year"=>"2024", "cvc"=>"111"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1955ms (ActiveRecord: 0.0ms | Allocations: 7265)
+
+
+Started GET "/" for ::1 at 2023-05-10 10:07:31 +0400
+Processing by ApplicationController#stripe_payment as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering application/stripe_payment.html.erb within layouts/application
+  Rendered application/stripe_payment.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3249)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 5637)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 5974)
+
+

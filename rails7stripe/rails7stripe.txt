@@ -1,0 +1,27 @@
+rails new rails7stripe --database postgresql --css bootstrap
+
+gem 'dotenv-rails', groups: [:development, :test]
+
+in development do:
+gem 'annotate'
+gem 'letter_opener' 
+
+bundle add devise devise-i18n devise-bootstrap5
+
+rails g devise:install
+
+rails g divise User role:integer
+
+t.integer :role, null: false, default: 0
+
+rails g divise:views:bootsrap # here not used
+
+touch .env
+
+touch docker-compose.yml
+
+touch Dockerfile-postgres
+
+docker compose up -d
+
+db:create db:migrate
